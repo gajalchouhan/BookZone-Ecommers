@@ -1,0 +1,990 @@
+[
+  {
+    "type": "put",
+    "url": "/api/v1/:bookId/edit",
+    "title": "edit the books",
+    "version": "0.0.1",
+    "name": "Edit_Book",
+    "group": "Edit",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "Edit"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/book/create",
+    "title": "Create a Product",
+    "version": "0.0.1",
+    "name": "create_Book",
+    "group": "create",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "create"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/view/user/create",
+    "title": "create user",
+    "version": "0.0.1",
+    "name": "create_user_info",
+    "group": "create",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"userName\": \"String\",\n                      \"contactNumber\": \"number\",\n                      \"address\": \"String\",\n                      \"booksInCart\": [],\n                       \"numberOf Books\": number,\n                      \"userId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "create"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/:bookId/delete",
+    "title": "delete a book",
+    "version": "0.0.1",
+    "name": "Delete_Books",
+    "group": "delete",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "delete"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/view/addBook/:bookId/user/:userId",
+    "title": "get information about book",
+    "version": "0.0.1",
+    "name": "add_book_in_cart",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"userName\": \"String\",\n                      \"contactNumber\": \"number\",\n                      \"address\": \"String\",\n                      \"booksInCart\": [],\n                       \"numberOf Books\": number,\n                      \"userId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/view/user/:userId",
+    "title": "get information about user",
+    "version": "0.0.1",
+    "name": "user_info",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"userName\": \"String\",\n                      \"contactNumber\": \"number\",\n                      \"address\": \"String\",\n                      \"booksInCart\": [],\n                       \"numberOf Books\": number,\n                      \"userId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/view/user/:userId",
+    "title": "get information about user",
+    "version": "0.0.1",
+    "name": "user_info",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"userName\": \"String\",\n                      \"contactNumber\": \"number\",\n                      \"address\": \"String\",\n                      \"booksInCart\": [],\n                       \"numberOf Books\": number,\n                      \"userId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/title/:title",
+    "title": "view Books",
+    "version": "0.0.1",
+    "name": "view_Book_By_Title",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/author/:author",
+    "title": "Create a Product",
+    "version": "0.0.1",
+    "name": "view_Books_By_Author",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/view/:bookId",
+    "title": "View Particular Books",
+    "version": "0.0.1",
+    "name": "view_By_BookID",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/all",
+    "title": "View all Books",
+    "version": "0.0.1",
+    "name": "view_all_books",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/users",
+    "title": "view all users",
+    "version": "0.0.1",
+    "name": "view_all_users",
+    "group": "information",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"title\": \"String\",\n                      \"isAvailable\": \"Boolean,\n                      \"author\": \"String\",\n                      \"isbn\": number,\n                       \"price\": number,\n                      \"bookId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "information"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/view/removeBook/:bookId/user/:userId",
+    "title": "remove book in cart",
+    "version": "0.0.1",
+    "name": "remove_Book",
+    "group": "remove",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authToken",
+            "description": "<p>The token for authentication.(Send authToken as a query Param or header Param or Body param)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>title of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "availability",
+            "description": "<p>Availability of the product passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "isbn",
+            "description": "<p>isbn of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "author",
+            "description": "<p>author of the book passed as a body parameter.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Price of the book passed as a body parameter.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"error\": \"No\",\n  \"message\": \"Product Created Successfully!!\",\n   \"status\": 200,    \n   \"data\" : {\n                     \"userName\": \"String\",\n                      \"contactNumber\": \"number\",\n                      \"address\": \"String\",\n                      \"booksInCart\": [],\n                       \"numberOf Books\": number,\n                      \"userId\": \"String\",\n                   }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n  \"error\": \"Yes\",\n   \"message\": \"Error Occured\",\n    \"status\":500,\n     \"data\":null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/book.js",
+    "groupTitle": "remove"
+  }
+]

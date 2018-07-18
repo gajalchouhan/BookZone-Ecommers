@@ -1,0 +1,7 @@
+{
+    "name" : "Book Store",
+    "version" : "0.0.1",
+    "description" : "This is the Book Store",
+    "title" : "Book APIs",
+    "url" : "http://localhost:3000"
+}
