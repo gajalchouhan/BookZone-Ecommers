@@ -62,10 +62,6 @@ function onError(error) {
             logger.error(error.code + ':elavated privileges required', 'serverOnErrorHandler', 10)
             process.exit(1)
             break
-        case 'EADDRINUSE':
-            logger.error(error.code + ':port is already in use.', 'serverOnErrorHandler', 10)
-            process.exit(1)
-            break
         default:
             logger.error(error.code + ':some unknown error occured', 'serverOnErrorHandler', 10)
             throw error
